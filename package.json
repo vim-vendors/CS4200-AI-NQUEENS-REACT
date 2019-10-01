@@ -1,0 +1,40 @@
+{
+  "name": "Boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync": "browser-sync start --server --port 3000 --watchEvents 'change' --no-inject-changes --no-open --directory --files 'public/index.html' 'public/bundle.js'",
+    "watch": "babel public/src/app.jsx --out-file=public/scripts/app.js --presets=env,react --watch",
+    "flavor": "babel public/src/playground/counter-example.jsx --out-file=public/scripts/app.js --presets=env,react --watch",
+    "build": "webpack --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "chessboardjsx": "^2.4.2",
+    "normalize.css": "^8.0.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-modal": "^3.8.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-compile": "^2.0.0",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "browser-sync": "^2.26.7",
+    "css-loader": "^2.1.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "validator": "^8.0.0",
+    "webpack": "^3.1.0"
+  }
+}
